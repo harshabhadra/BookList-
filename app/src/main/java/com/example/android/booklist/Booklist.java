@@ -5,8 +5,6 @@ public class Booklist {
 
     private String authorName;
 
-    private String date;
-
     private String price;
 
     private String curency;
@@ -15,19 +13,17 @@ public class Booklist {
 
     private String writerName;
 
+    private String imageUrl;
 
-    public Booklist(String bookName, String authorName, String date, String price,String url, String curency, String writerName) {
+
+    public Booklist(String bookName, String authorName, String price,String url, String curency, String writerName, String imageUrl) {
         this.bookName = bookName;
         this.authorName = authorName;
-        this.date = date;
         this.price = price;
         this.url = url;
         this.curency= curency;
         this.writerName= writerName;
-    }
-
-    public String getDate() {
-        return date;
+        this.imageUrl = imageUrl;
     }
 
     public String getPrice() {
@@ -54,4 +50,7 @@ public class Booklist {
         return writerName;
     }
 
+    public String getImageUrl() {
+        return imageUrl;
+    }
 }

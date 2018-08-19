@@ -144,7 +144,6 @@ public final class QueryUtils {
 
                 String publisher = volume.getString("publisher");
 
-                String publishDate = volume.getString("publishedDate");
 
                 JSONObject saleInfo = currentBook.getJSONObject("saleInfo");
                 JSONObject price = saleInfo.getJSONObject("retailPrice");
@@ -155,7 +154,11 @@ public final class QueryUtils {
 
                 String url = saleInfo.getString("buyLink");
 
-                Booklist booklist = new Booklist(title,publisher,publishDate,amount,url,currency, author);
+                JSONObject imageLink = volume.getJSONObject("imageLinks");
+
+                String coverImageUrl = imageLink.getString("smallThumbnail");
+
+                Booklist booklist = new Booklist(title,publisher,amount,url,currency,author,coverImageUrl);
 
                 bookLists.add(booklist);
             }

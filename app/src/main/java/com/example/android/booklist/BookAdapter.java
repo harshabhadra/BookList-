@@ -5,7 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -36,9 +39,6 @@ public class BookAdapter extends ArrayAdapter<Booklist> {
         TextView authorName = listItemView.findViewById(R.id.author_name);
         authorName.setText(currentBooklist.getAuthorName());
 
-        TextView dateView = listItemView.findViewById(R.id.date);
-        dateView.setText(currentBooklist.getDate());
-
         TextView priceView = listItemView.findViewById(R.id.price);
         priceView.setText(currentBooklist.getPrice());
 
@@ -48,6 +48,8 @@ public class BookAdapter extends ArrayAdapter<Booklist> {
         TextView writerNmae = listItemView.findViewById(R.id.writer_name);
         writerNmae.setText(currentBooklist.getWriterName());
 
+        ImageView coverImage = listItemView.findViewById(R.id.cover_image);
+        Picasso.get().load(currentBooklist.getImageUrl()).placeholder(R.mipmap.book_icon).error(R.mipmap.ic_launcher).into(coverImage);
 
         return listItemView;
     }

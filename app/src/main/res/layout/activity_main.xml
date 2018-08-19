@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#BA68C8"
+    android:background="#7986CB"
     tools:context=".MainActivity">
 
     <TextView
@@ -43,7 +43,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#7B1FA2"
+            android:background="#304292"
             android:paddingTop="16dp"
             android:text="search"
             android:textAlignment="center"
@@ -53,8 +53,6 @@
 
     <RelativeLayout
         android:background="#FFFFFF"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
